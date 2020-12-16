@@ -22,10 +22,12 @@ class TensorflowMLPClassifier(h1.MLModel):
     hyperparameter = {
         'tuning_param': {
             'lr': float, # 0.01 ~ 0.1
-            'units': int # 4 ~ 16
+            'units': int, # 4 ~ 16
+            'n_layer': int,
+            'epochs': int
         },
         'target_metrics': {
-            'accuracy': 'minimize'
+            'accuracy': 'maximize'
         }
     }
 
